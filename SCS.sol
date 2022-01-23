@@ -34,8 +34,8 @@ contract SCS is ERC1155 {
         console.log("ressiue");
     }
     //Stock Transacting
-    function transfer(address target) public {
-        safeTransferFrom(msg.sender, target, NFT_ID, 1, "");
+    function transfer(address target, uint256 _amount) public {
+        safeTransferFrom(msg.sender, target, NFT_ID, _amount, "");
         console.log("transfered");
     }
     //Stock Redemption
